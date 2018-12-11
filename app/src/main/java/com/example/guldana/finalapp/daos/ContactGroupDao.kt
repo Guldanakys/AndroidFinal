@@ -14,4 +14,7 @@ interface ContactGroupDao {
     @Query("Select * from groups")
     fun getGroups () : List<ContactGroup>
 
+    @Query("Select name from groups")
+    fun getGroupsPriority () : List<String>
+
 }

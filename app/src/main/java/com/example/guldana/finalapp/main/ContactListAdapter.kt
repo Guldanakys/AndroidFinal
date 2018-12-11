@@ -14,7 +14,11 @@ class ContactListAdapter(private val contacts: List<Contact>) : RecyclerView.Ada
     @SuppressLint("WrongConstant")
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
         p0.itemView.txt_name.text = contacts[p1].name
-        p0.itemView.txt_mobile.text = contacts[p1].mobileNumber
+        p0.itemView.txt_group.text = contacts[p1].group_id.toString()
+
+        p0.itemView.setOnClickListener {
+
+        }
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecyclerView.ViewHolder {

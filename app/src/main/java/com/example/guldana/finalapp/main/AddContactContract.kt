@@ -5,14 +5,12 @@ import com.example.guldana.finalapp.base.BasePresenter
 import com.example.guldana.finalapp.base.BaseView
 import com.example.guldana.finalapp.models.Contact
 
-interface MainContract {
+interface AddContactContract {
     interface View : BaseView<Presenter> {
-        fun contactsShow(contactsList: List<Contact>)
+        fun spinnerShow(optionsList: List<String>)
     }
 
     interface Presenter : BasePresenter<View> {
-        fun loadContacts(context: Context)
-
-        fun saveContact(name: String, mobile: String, home: String, work: String, group: String, context: Context)
+        fun loadContactGroups(context: Context)
     }
 }
