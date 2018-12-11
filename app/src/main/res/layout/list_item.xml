@@ -14,23 +14,23 @@
             android:padding="10dp">
 
         <TextView
-                android:id="@+id/title"
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="title"
+                android:text="Name"
                 android:textColor="@android:color/black"
                 android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-                android:id="@+id/body"
+                android:id="@+id/txt_mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Body"
+                android:text="000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
     </android.support.constraint.ConstraintLayout>
 
