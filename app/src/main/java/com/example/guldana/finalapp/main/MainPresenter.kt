@@ -8,6 +8,8 @@ import kotlin.concurrent.thread
 class MainPresenter(override var view: MainContract.View?) :
     MainContract.Presenter {
 
+    var groupId: Int = 2
+
     override fun loadContacts(context: Context) {
         thread {
 
@@ -34,10 +36,9 @@ class MainPresenter(override var view: MainContract.View?) :
             (context as App).database.runInTransaction(object : Runnable {
 
                 override fun run() {
-                    val priorities = contactGroupDao.getGroupsPriority()
-                    var groupId: Int = 1
-                    for(g in priorities) {
-                        if(g.equals("Friends"))
+                    val groups = contactGroupDao.getGroups()
+                    for(g in groups) {
+                        if(g.name.equals("Friends"))
                             groupId = 2
                         else if(g.equals("Family"))
                             groupId = 1

@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun contactsShow(contactsList: List<Contact>) {
-        val adapter = ContactListAdapter(contactsList)
+        val adapter = ContactListAdapter(contactsList, applicationContext)
         val recyclerView = findViewById(R.id.recycler) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapter

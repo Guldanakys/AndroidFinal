@@ -8,6 +8,8 @@ import kotlin.concurrent.thread
 class AddContactPresenter(override var view: AddContactContract.View?) :
     AddContactContract.Presenter {
 
+
+
     override fun loadContactGroups(context: Context) {
         thread {
 
